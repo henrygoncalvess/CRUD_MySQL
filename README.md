@@ -145,12 +145,29 @@ Rota | Descrição
 
 ### POST - ***Request***
 
+_nome, nascimento e sexo são obrigatórios_
 ``` json
-em andamento...
+{
+    "nome": "novo usuario",
+    "nascimento": "2021-11-01",
+    "sexo": "M",
+    "peso": 66.4
+}
 ```
 
 ***Response***
-em andamento...
+
+``` json
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "info": "",
+    "serverStatus": 2,
+    "warningStatus": 0,
+    "changedRows": 0
+}
+```
 
 <br>
 
