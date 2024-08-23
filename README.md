@@ -109,14 +109,14 @@ Rota | Descrição
 ### Exemplo de Banco de Dados
 
 ``` python
-+------------+---------------+------+-----+---------+-------+ +-----------+------------+------+------+
-| Field      | Type          | Null | Key | Default | Extra | | nome      | nascimento | sexo | peso |
-+------------+---------------+------+-----+---------+-------+ +-----------+------------+------+------+
-| nome       | varchar(30)   | NO   |     | NULL    |       | | Miguel    | 2004-10-29 | M    | 55.3 |
-| nascimento | date          | NO   |     | NULL    |       | | Pedro     | 2001-02-04 | M    | 80.9 |
-| sexo       | enum('M','F') | NO   |     | NULL    |       | | Valentina | 1989-04-07 | F    | 62.1 |
-| peso       | float         | YES  |     | NULL    |       | +-----------+------------+------+------+
-+------------+---------------+------+-----+---------+-------+
++------------+---------------+------+---------+ +-----------+------------+------+------+
+| Field      | Type          | Null | Default | | nome      | nascimento | sexo | peso |
++------------+---------------+------+---------+ +-----------+------------+------+------+
+| nome       | varchar(30)   | NO   | NULL    | | Miguel    | 2004-10-29 | M    | 55.3 |
+| nascimento | date          | NO   | NULL    | | Pedro     | 2001-02-04 | M    | 80.9 |
+| sexo       | enum('M','F') | NO   | NULL    | | Valentina | 1989-04-07 | F    | 62.1 |
+| peso       | float         | YES  | NULL    | +-----------+------------+------+------+
++------------+---------------+------+---------+
 ```
 
 <br>
@@ -173,12 +173,48 @@ _nome, nascimento e sexo são obrigatórios_
 
 ### PUT - ***Request***
 
+_linha atual_
+``` python
++-------+------------+
+| nome  | nascimento |
++-------+------------+
+| Pedro | 2001-02-04 |
++-------+------------+
+```
+
+***Request***
+
+`"usuario"`: parâmetro para localizar a linha que será alterada.  
+informar apenas os parâmetros a serem alterados
 ``` json
-em andamento...
+{
+    "usuario": "Pedro",
+    "nascimento": "1999-09-09"
+}
 ```
 
 ***Response***
-em andamento...
+
+``` json
+{
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "info": "Rows matched: 1  Changed: 1  Warnings: 0",
+    "serverStatus": 34,
+    "warningStatus": 0,
+    "changedRows": 1
+}
+```
+
+_linha alterada_
+``` python
++-------+------------+
+| nome  | nascimento |
++-------+------------+
+| Pedro | 1999-09-09 |
++-------+------------+
+```
 
 <br>
 
