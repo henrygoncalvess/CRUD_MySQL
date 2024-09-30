@@ -23,18 +23,18 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 ### Estrutura de pastas
 
 ├──**CRUD_MySQL/**  
-│&nbsp; &nbsp; &nbsp;├──[src/](CRUD_MySQL/src)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[config/](CRUD_MySQL/src/config) _`conexão com banco de dados`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[db.js](CRUD_MySQL/src/config/db.js)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[controllers/](CRUD_MySQL/src/controllers) _`lógica de negócio`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserController.js](CRUD_MySQL/src/controllers/UserController.js)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[models/](CRUD_MySQL/src/models) _`modelos que lidam c/ banco de dados. consultas, manipulação etc.`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserModel.js](CRUD_MySQL/src/models/db.js)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;└──[routes/](CRUD_MySQL/src/routes) _`rotas da API`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\`- - -[Users.js](CRUD_MySQL/src/routes/users.js)  
-│&nbsp; &nbsp; &nbsp; \`- - -[app.js](CRUD_MySQL/src/app.js) _`lógica da aplicação`_  
-│&nbsp; &nbsp; &nbsp; \`- - -[server.js](CRUD_MySQL/src/server.js) _`ponto de entrada da aplicação`_  
-\`- - - ~~.env~~ _`configs de ambiente`_  
+│&nbsp; &nbsp; &nbsp;├──[src/](src)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[config/](src/config) _`conexão com banco de dados`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[db.js](src/config/db.js)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[controllers/](src/controllers) _`lógica de negócio`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserController.js](src/controllers/UserController.js)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[models/](src/models) _`modelos que lidam c/ banco de dados. consultas, manipulação etc.`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserModel.js](src/models/UserModel.js)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;└──[routes/](src/routes) _`rotas da API`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\`- - -[Users.js](src/routes/Users.js)  
+│&nbsp; &nbsp; &nbsp; \`- - -[app.js](src/app.js) _`lógica da aplicação`_  
+│&nbsp; &nbsp; &nbsp; \`- - -[server.js](src/server.js) _`ponto de entrada da aplicação`_  
+\`- - - ~~.env~~ _`configs de ambiente`_   
 
 <br>
 
