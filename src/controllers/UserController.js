@@ -54,7 +54,7 @@ class UserController{
                 throw new Error("Nenhum dado para atualizar")
             }
 
-            const updateQueryString = `UPDATE ${process.env.TABLE} SET ${stringUpdates.join(', ')} WHERE nome LIKE ?`
+            const updateQueryString = `UPDATE ${process.env.TABLE} SET ${stringUpdates.join(', ')} WHERE nome = ?`
 
             values.push(usuario)
 
@@ -68,18 +68,22 @@ class UserController{
         }
     }
 
-    remove(req, res){
-        const { deleteUser } = req.body
+    async remove(req, res){
+        try{
+            const { usuario } = req.body
 
-        console.log(database);
+            const deleteQuery = await database.query(`DELETE FROM ${process.env.TABLE} WHERE nome = ?`,
+                [usuario]
+            )
 
-        database.forEach((element, pos) => {
-            if (element.username === deleteUser){
-                database.splice(pos, 1)
-            }
-        })
+            console.log(deleteQuery);
 
-        res.sendStatus(200)
+            res.json(deleteQuery)
+
+        } catch (error) {
+            res.sendStatus(400)
+            throw error
+        }
     }
 }
 

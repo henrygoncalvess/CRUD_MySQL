@@ -220,9 +220,51 @@ _linha alterada_
 
 ### DELETE - ***Request***
 
+_linha atual_
+``` python
++--------------+------------+------+------+
+| nome         | nascimento | sexo | peso |
++--------------+------------+------+------+
+| Miguel       | 2004-10-29 | M    | 55.3 |
+| Pedro        | 1999-09-09 | M    | 80.9 |
+| Valentina    | 1989-04-07 | F    | 62.1 |
+| novo usuario | 2021-11-01 | M    | 66.4 |
++--------------+------------+------+------+
+```
+
+***Request***
+
+`"usuario"`: parâmetro para localizar a linha que será deletada  
 ``` json
-em andamento...
+{
+    "usuario": "novo usuario"
+}
 ```
 
 ***Response***
-em andamento...
+
+``` JSON
+[
+  {
+    "fieldCount": 0,
+    "affectedRows": 1,
+    "insertId": 0,
+    "info": "",
+    "serverStatus": 34,
+    "warningStatus": 0,
+    "changedRows": 0
+  },
+  null
+]
+```
+
+_linha alterada_
+``` python
++-----------+------------+------+------+
+| nome      | nascimento | sexo | peso |
++-----------+------------+------+------+
+| Miguel    | 2004-10-29 | M    | 55.3 |
+| Pedro     | 1999-09-09 | M    | 80.9 |
+| Valentina | 1989-04-07 | F    | 62.1 |
++-----------+------------+------+------+
+```
