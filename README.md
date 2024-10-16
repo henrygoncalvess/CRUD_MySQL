@@ -32,16 +32,17 @@ git clone https://github.com/henrygoncalvess/CRUD_MySQL.git
 <br>
 
 ### Pré-requisitos
-- MySQL - [Tutorial para download](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela)
+- **MySQL** - [Tutorial de instalação](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela)
 
-Para a instalação dos frameworks, middlewares e dependências que vão possibilitar a criação da API  
-e a conexão com o MySQL, é necessário que você possua as seguintes ferramentas:
-- [Node.js](https://nodejs.org/pt)
+Para a instalação dos frameworks, middlewares e dependências que possibilitaram a criação da API  
+e a conexão com o MySQL é necessário que você possua as seguintes ferramentas:
 
-- [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- **Node.js** - [Tutorial de instalação](https://nodejs.org/pt)
+
+- **npm** - [Tutorial de instalação](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
 Para fazer requisições e testar a conexão com o banco:
-- [Postman](https://www.postman.com/downloads/)
+- **Postman** - [Tutorial de instalação](https://www.postman.com/downloads/)
 
 > [!tip]
 > Também é possível fazer requisições pela linha de comando.  
@@ -51,7 +52,7 @@ Para fazer requisições e testar a conexão com o banco:
 
 ### Etapas
 
-comece iniciando seu projeto Node.js
+comece criando seu projeto Node.js
 
 `pasta\do\repo\clonado\CRUD_MySQL`
 ``` bash
@@ -68,7 +69,7 @@ em andamento...
 
 ## Instrução de uso
 
-Iniciar o servidor local.
+Inicie o servidor local.
 
 `em\andamento`
 ``` bash
@@ -77,7 +78,8 @@ em andamento...
 
 ## Endpoints do CRUD
 
-Abra o postman para testar as respostas da conexão com o MySQL.
+No Postman *ou na linha de comando*  
+teste as respostas da conexão com o MySQL seguindo os **endpoints** abaixo.
 
 > [!tip]
 > acesse este link, caso não saiba utilizar o Postman para fazer requisições [Postman](https://learning.postman.com/docs/introduction/overview/)  
