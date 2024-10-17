@@ -52,7 +52,20 @@ Para fazer requisições e testar a conexão com o banco:
 
 ### Etapas
 
-#### 1. crie o arquivo `.env` na raiz do projeto - `repositorios\clonados\CRUD_MySQL`, e configure as variáveis de acordo com seus dados do MySQL.
+#### 1. crie seu projeto Node.js
+
+`repositorios\clonados\CRUD_MySQL`
+``` bash
+npm init
+```
+#### 2. em seguida, instale as dependências necessárias para o funcionamento do projeto.
+
+`repositorios\clonados\CRUD_MySQL`
+``` bash
+npm install cors@4.24.1 mysql2@3.11.3 dotenv@16.4.5 express@4.21.1
+```
+
+#### 3. crie o arquivo `.env` na raiz do projeto - `repositorios\clonados\CRUD_MySQL`, e configure as variáveis de acordo com seus dados do MySQL.
 
 ``` .env
 HOST=seu_host #exemplo: localhost
@@ -60,19 +73,6 @@ USER=seu_usuario #exemplo: root
 PASSWORD=sua_senha
 DB=nome_do_seu_database
 TABLE=sua_tabela
-```
-
-#### 2. crie seu projeto Node.js
-
-`repositorios\clonados\CRUD_MySQL`
-``` bash
-npm init
-```
-#### 3. em seguida, instale as dependências necessárias para o funcionamento do projeto.
-
-`repositorios\clonados\CRUD_MySQL`
-``` bash
-npm install cors@4.24.1 mysql2@3.11.3 dotenv@16.4.5 express@4.21.1
 ```
 
 <br>
@@ -106,6 +106,21 @@ Rota | Descrição
 
 <br>
 
+### Exemplo de Banco de Dados
+
+``` python
++------------+---------------+------+-----+---------+-------+ +-----------+------------+------+------+
+| Field      | Type          | Null | Key | Default | Extra | | nome      | nascimento | sexo | peso |
++------------+---------------+------+-----+---------+-------+ +-----------+------------+------+------+
+| nome       | varchar(30)   | NO   |     | NULL    |       | | Miguel    | 2004-10-29 | M    | 55.3 |
+| nascimento | date          | NO   |     | NULL    |       | | Pedro     | 2001-02-04 | M    | 80.9 |
+| sexo       | enum('M','F') | NO   |     | NULL    |       | | Valentina | 1989-04-07 | F    | 62.1 |
+| peso       | float         | YES  |     | NULL    |       | +-----------+------------+------+------+
++------------+---------------+------+-----+---------+-------+
+```
+
+<br>
+
 ### GET - ***Response***
 
 ``` json
@@ -124,12 +139,7 @@ Rota | Descrição
       "peso": 62.1
     }
   ],
-  [
-    "nome": "VARCHAR(30) NOT NULL",
-    "nascimento": "DATE(10) NOT NULL",
-    "sexo": "ENUM('M','F') NOT NULL",
-    "peso": "FLOAT"
-  ]
+  .....
 ]
 ```
 
