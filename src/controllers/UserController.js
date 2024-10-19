@@ -1,4 +1,4 @@
-const database = require('../models/connection.js')
+const database = require('../models/db.js')
 
 class UserController{
     index(req, res){
