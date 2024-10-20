@@ -24,7 +24,7 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 ### Clonando Repositório
 No Terminal, certifique de que você está na pasta onde vai ficar o repositório
 
-```pasta\do\repo\clonado```
+```repositorios\clonados```
 ``` bash
 git clone https://github.com/henrygoncalvess/CRUD_MySQL.git
 ```
@@ -54,15 +54,15 @@ Para fazer requisições e testar a conexão com o banco:
 
 comece criando seu projeto Node.js
 
-`pasta\do\repo\clonado\CRUD_MySQL`
+`repositorios\clonados\CRUD_MySQL`
 ``` bash
 npm init
 ```
 em seguida, instale as dependências necessárias para o funcionamento do projeto.
 
-`pasta\do\repo\clonado\CRUD_MySQL`
+`repositorios\clonados\CRUD_MySQL`
 ``` bash
-em andamento...
+npm install cors@4.24.1 mysql2@3.11.3 dotenv@16.4.5 express@4.21.1
 ```
 
 <br>
@@ -71,9 +71,9 @@ em andamento...
 
 Inicie o servidor local.
 
-`em\andamento`
+`repositorios\clonados\CRUD_MySQL\src`
 ``` bash
-em andamento...
+node server.js
 ```
 
 ## Endpoints do CRUD
@@ -89,10 +89,10 @@ teste as respostas da conexão com o MySQL seguindo os **endpoints** abaixo.
 
 Rota | Descrição
 --- | :---:
-***GET*** ` http://localhost:3000/em/andamento `| em andamento... - [ver JSON](#get---response)
-***POST*** ` http://localhost:3000/em/andamento `| em andamento... - [ver JSON](#post---request)
-***PUT*** ` http://localhost:3000/em/andamento `| em andamento... - [ver JSON](#put---request)
-***DELETE*** ` http://localhost:3000/em/andamento `| em andamento... - [ver JSON](#delete---request)
+***GET*** ` http://localhost:3000/api/user ` | Lista todas as informações da tabela - [ver JSON](#get---response)
+***POST*** ` http://localhost:3000/api/new/user ` | Adiciona um novo item na tabela - [ver JSON](#post---request)
+***PUT*** ` http://localhost:3000/api/update/user ` | Atualiza as informações da tabela - [ver JSON](#put---request)
+***DELETE*** ` http://localhost:3000/api/delete/user ` | Deleta uma linha da tabela - [ver JSON](#delete---request)
 
 <br>
 
