@@ -99,7 +99,28 @@ Rota | Descrição
 ### GET - ***Response***
 
 ``` json
-em andamento...
+[
+  [
+    {
+      "nome": "Pedro",
+      "nascimento": "2000-01-04T02:00:00.000Z",
+      "sexo": "M",
+      "peso": 80
+    },
+    {
+      "nome": "Valentina",
+      "nascimento": "1989-04-07T03:00:00.000Z",
+      "sexo": "F",
+      "peso": 62.1
+    }
+  ],
+  [
+    "nome": "VARCHAR(30) NOT NULL",
+    "nascimento": "DATE(10) NOT NULL",
+    "sexo": "ENUM('M','F') NOT NULL",
+    "peso": "FLOAT"
+  ]
+]
 ```
 
 ### POST - ***Request***
