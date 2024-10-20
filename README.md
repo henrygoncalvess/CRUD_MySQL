@@ -2,7 +2,7 @@
 
 ### licença e tecnologias utilizadas
 
-<img src="https://img.shields.io/github/license/henrygoncalvess/API_RESTful?style=for-the-badge"> <img src="https://img.shields.io/badge/mysql-8.0.39-blue?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/express-4.21.1-black?style=for-the-badge&logoColor=black"> <img src="https://img.shields.io/badge/cors-2.8.5-royalblue?style=for-the-badge&logo=cors&logoColor=black"> <img src="https://img.shields.io/badge/node-20.16.0-43853D?style=for-the-badge&logo=node.js"> <img src="https://img.shields.io/badge/npm-10.8.2-firebrick?style=for-the-badge&logo=npm&logoColor=firebrick"> <img src="https://img.shields.io/badge/postman-11.16.0-orange?style=for-the-badge&logo=postman">
+<img src="https://img.shields.io/github/license/henrygoncalvess/CRUD_MySQL?style=for-the-badge&labelColor=gray&color=97ca00"> <img src="https://img.shields.io/badge/mysql-8.0.39-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=gray"> <img src="https://img.shields.io/badge/express-4.21.1-000000?style=for-the-badge&logo=express&logoColor=black&labelColor=gray"> <img src="https://img.shields.io/badge/cors-2.8.5-royalblue?style=for-the-badge&logo=cors&logoColor=black&labelColor=gray"> <img src="https://img.shields.io/badge/node-20.16.0-5FA04E?style=for-the-badge&logo=node.js&logoColor=5FA04E&labelColor=gray"> <img src="https://img.shields.io/badge/npm-10.8.2-CB3837?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=gray"> <img src="https://img.shields.io/badge/postman-11.16.0-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37&labelColor=gray"> <img src="https://img.shields.io/badge/dotenv-16.4.5-ECD53F?style=for-the-badge&logo=dotenv&logoColor=yellow&labelColor=gray">
 
 Criando conexão com MySQL e utilizando minha API REST para fazer as quatro operações básicas de manipulação de dados. Aprenda a conectar seu MySQL e fique a vontade para estudar o código
 
@@ -52,13 +52,23 @@ Para fazer requisições e testar a conexão com o banco:
 
 ### Etapas
 
-comece criando seu projeto Node.js
+#### 1. crie o arquivo `.env` na raiz do projeto - `repositorios\clonados\CRUD_MySQL`, e configure as variáveis de acordo com seus dados do MySQL.
+
+``` .env
+HOST=seu_host #exemplo: localhost
+USER=seu_usuario #exemplo: root
+PASSWORD=sua_senha
+DB=nome_do_seu_database
+TABLE=sua_tabela
+```
+
+#### 2. crie seu projeto Node.js
 
 `repositorios\clonados\CRUD_MySQL`
 ``` bash
 npm init
 ```
-em seguida, instale as dependências necessárias para o funcionamento do projeto.
+#### 3. em seguida, instale as dependências necessárias para o funcionamento do projeto.
 
 `repositorios\clonados\CRUD_MySQL`
 ``` bash
