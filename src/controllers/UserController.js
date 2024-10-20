@@ -3,9 +3,9 @@ const database = require('../models/db.js')
 class UserController{
     async index(req, res){
         try{
-            const response = await database.query(`SELECT * FROM ${process.env.TABLE}`)
+            const getQuery = await database.query(`SELECT * FROM ${process.env.TABLE}`)
 
-            res.json(response)
+            res.json(getQuery)
 
         } catch (error){
             res.sendStatus(400)
@@ -21,12 +21,12 @@ class UserController{
                 throw new Error(`Os campos "nome", "nascimento" e "sexo" são obrigatórios.`);
             }
 
-            const [ addNewUser ] = await database.query(
+            const [ newUserQuery ] = await database.query(
                 `INSERT INTO ${process.env.TABLE} (nome, nascimento, sexo, peso) VALUES (?, ?, ?, ?)`,
                 [nome, nascimento, sexo, peso]
             )
 
-            res.json(addNewUser)
+            res.json(newUserQuery)
 
         } catch (error){
             res.sendStatus(400)
@@ -34,16 +34,38 @@ class UserController{
         }
     }
 
-    update(req, res){
-        const currentUser = req.body
+    async update(req, res){
+        try{
+            const { usuario, ...updates } = req.body;
 
-        database.forEach(element => {
-            if (element.username === currentUser.username){
-                element.username = currentUser.newUsername
+            if (!usuario){
+                throw new Error(`O campo "usuario" é obrigatório.`);
             }
-        })
 
-        res.sendStatus(200)
+            const stringUpdates = []
+            const values = []
+
+            Object.keys(updates).forEach(key => {
+                stringUpdates.push(`${key} = ?`)
+                values.push(updates[key])
+            })
+
+            if (stringUpdates.length === 0){
+                throw new Error("Nenhum dado para atualizar")
+            }
+
+            const updateQueryString = `UPDATE ${process.env.TABLE} SET ${stringUpdates.join(', ')} WHERE nome LIKE ?`
+
+            values.push(usuario)
+
+            const [ updateQuery ] = await database.query(updateQueryString, values)
+
+            res.json(updateQuery)
+
+        } catch (error) {
+            res.sendStatus(400)
+            throw error
+        }
     }
 
     remove(req, res){
