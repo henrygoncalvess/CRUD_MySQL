@@ -1,10 +1,12 @@
 const database = require('../models/db.js')
 
 class UserController{
-    index(req, res){
-        const response = database
+    async index(req, res){
+        const response = await database.query(`SELECT * FROM ${process.env.TABLE}`)
 
-        res.json(response)
+        console.log(response)
+
+        res.sendStatus(200)
     }
 
     new(req, res){
