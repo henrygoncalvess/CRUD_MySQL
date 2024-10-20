@@ -4,13 +4,21 @@ class UserController{
     async index(req, res){
         const response = await database.query(`SELECT * FROM ${process.env.TABLE}`)
 
-        console.log(response)
-
-        res.sendStatus(200)
+        res.json(response)
     }
 
-    new(req, res){
-        database.push(req.body)
+    async new(req, res){
+        const { nome, nascimento, sexo, peso } = req.body
+
+        const newUser = await database.query(
+            `INSERT INTO ${process.env.TABLE}
+            (nome, nascimento, sexo, peso)
+            VALUES
+            (?, ?, ?, ?)`,
+            [nome, nascimento, sexo, peso]
+        )
+
+        console.log(newUser)
 
         res.sendStatus(201)
     }
