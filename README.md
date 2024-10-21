@@ -150,8 +150,7 @@ _nome, nascimento e sexo são obrigatórios_
 {
     "nome": "novo usuario",
     "nascimento": "2021-11-01",
-    "sexo": "M",
-    "peso": 66.4
+    "sexo": "M"
 }
 ```
 
