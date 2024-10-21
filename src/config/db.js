@@ -7,10 +7,4 @@ const database = mysql.createConnection({
     database: process.env.DB
 }).promise();
 
-database.connect(error => {
-    if (error) throw error
-
-    console.log(error);
-})
-
 module.exports = database

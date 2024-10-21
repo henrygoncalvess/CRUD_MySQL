@@ -1,11 +1,12 @@
 const database = require('../config/db.js')
+const UserModel = require('../models/UserModel.js')
 
 class UserController{
     async index(req, res){
         try{
-            const getQuery = await database.query(`SELECT * FROM ${process.env.TABLE}`)
+            const users = await UserModel.findAll()
 
-            res.json(getQuery)
+            res.json(users)
 
         } catch (error){
             res.sendStatus(400)
@@ -17,16 +18,9 @@ class UserController{
         try{
             const { nome, nascimento, sexo, peso } = req.body
             
-            if (!nome || !nascimento || !sexo){
-                throw new Error(`Os campos "nome", "nascimento" e "sexo" são obrigatórios.`);
-            }
+            const newUser = await UserModel.create({ nome, nascimento, sexo, peso })
 
-            const [ newUserQuery ] = await database.query(
-                `INSERT INTO ${process.env.TABLE} (nome, nascimento, sexo, peso) VALUES (?, ?, ?, ?)`,
-                [nome, nascimento, sexo, peso]
-            )
-
-            res.json(newUserQuery)
+            res.json(newUser)
 
         } catch (error){
             res.sendStatus(400)
@@ -38,29 +32,9 @@ class UserController{
         try{
             const { usuario, ...updates } = req.body;
 
-            if (!usuario){
-                throw new Error(`O campo "usuario" é obrigatório.`);
-            }
+            const userUpdate = await UserModel.update(usuario, updates)
 
-            const stringUpdates = []
-            const values = []
-
-            Object.keys(updates).forEach(key => {
-                stringUpdates.push(`${key} = ?`)
-                values.push(updates[key])
-            })
-
-            if (stringUpdates.length === 0){
-                throw new Error("Nenhum dado para atualizar")
-            }
-
-            const updateQueryString = `UPDATE ${process.env.TABLE} SET ${stringUpdates.join(', ')} WHERE nome = ?`
-
-            values.push(usuario)
-
-            const [ updateQuery ] = await database.query(updateQueryString, values)
-
-            res.json(updateQuery)
+            res.json(userUpdate)
 
         } catch (error) {
             res.sendStatus(400)
@@ -72,13 +46,9 @@ class UserController{
         try{
             const { usuario } = req.body
 
-            const deleteQuery = await database.query(`DELETE FROM ${process.env.TABLE} WHERE nome = ?`,
-                [usuario]
-            )
+            const userDelete = await UserModel.remove(usuario)
 
-            console.log(deleteQuery);
-
-            res.json(deleteQuery)
+            res.json(userDelete)
 
         } catch (error) {
             res.sendStatus(400)
