@@ -19,6 +19,22 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
   
 </details>
 
+<br>
+
+### Estrutura de pastas
+
+├─CRUD_MySQL/  
+│&nbsp; &nbsp; ├─src/  
+│&nbsp; &nbsp; │&nbsp; &nbsp; └─controllers/  
+│&nbsp; &nbsp; │&nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; \`-- UserController.js  
+│&nbsp; &nbsp; │&nbsp; &nbsp; ├─models/  
+│&nbsp; &nbsp; │&nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; \`-- db.js  
+│&nbsp; &nbsp; │&nbsp; &nbsp; └─routes/  
+│&nbsp; &nbsp; │&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; \`-- users.js  
+│&nbsp; &nbsp; \`-- app.js  
+│&nbsp; &nbsp; \`-- server.js  
+\`-- .env  
+
 ## Instrução de instalação
 
 ### Clonando Repositório
