@@ -1,4 +1,4 @@
-const database = require('../models/db.js')
+const database = require('../config/db.js')
 
 class UserController{
     async index(req, res){

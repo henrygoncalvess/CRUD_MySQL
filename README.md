@@ -6,7 +6,6 @@
 
 Criando conexão com MySQL e utilizando minha API REST para fazer as quatro operações básicas de manipulação de dados. Aprenda a conectar seu MySQL e fique a vontade para estudar o código
 
-  
 <details open="open">
 <summary>Tabela de Conteúdos</summary>
   
@@ -18,6 +17,26 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 - [Endpoints do CRUD](#endpoints-do-crud)
   
 </details>
+
+<br>
+
+### Estrutura de pastas
+
+├──**CRUD_MySQL/**  
+│&nbsp; &nbsp; &nbsp;├──[src/](CRUD_MySQL/src)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[config/](CRUD_MySQL/src/config) _`conexão com banco de dados`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[db.js](CRUD_MySQL/src/config/db.js)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[controllers/](CRUD_MySQL/src/controllers) _`lógica de negócio`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserController.js](CRUD_MySQL/src/controllers/UserController.js)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[models/](CRUD_MySQL/src/models) _`modelos que lidam c/ banco de dados. consultas, manipulação etc.`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserModel.js](CRUD_MySQL/src/models/db.js)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;└──[routes/](CRUD_MySQL/src/routes) _`rotas da API`_  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\`- - -[Users.js](CRUD_MySQL/src/routes/users.js)  
+│&nbsp; &nbsp; &nbsp; \`- - -[app.js](CRUD_MySQL/src/app.js) _`lógica da aplicação`_  
+│&nbsp; &nbsp; &nbsp; \`- - -[server.js](CRUD_MySQL/src/server.js) _`ponto de entrada da aplicação`_  
+\`- - - ~~.env~~ _`configs de ambiente`_  
+
+<br>
 
 ## Instrução de instalação
 
@@ -58,6 +77,7 @@ Para fazer requisições e testar a conexão com o banco:
 ``` bash
 npm init
 ```
+
 #### 2. em seguida, instale as dependências necessárias para o funcionamento do projeto.
 
 `repositorios\clonados\CRUD_MySQL`
@@ -85,6 +105,8 @@ Inicie o servidor local e veja [Endpoints do CRUD](#endpoints-do-crud) para test
 ``` bash
 node server.js
 ```
+
+<br>
 
 ## Endpoints do CRUD
 
@@ -142,6 +164,8 @@ Rota | Descrição
   .....
 ]
 ```
+
+<br>
 
 ### POST - ***Request***
 
