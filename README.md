@@ -79,7 +79,7 @@ TABLE=sua_tabela
 
 ## Instrução de uso
 
-Inicie o servidor local.
+Inicie o servidor local e veja [Endpoints do CRUD](#endpoints-do-crud) para testar as respostas do banco
 
 `repositorios\clonados\CRUD_MySQL\src`
 ``` bash
