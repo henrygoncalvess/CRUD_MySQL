@@ -2,7 +2,7 @@ const database = require('../config/db.js');
 
 class UserModel{
     static async findAll(){
-        const getQuery = await database.query(`SELECT * FROM ${process.env.TABLE}`)
+        const [ getQuery ] = await database.query(`SELECT * FROM ${process.env.TABLE}`)
 
         return getQuery
     }

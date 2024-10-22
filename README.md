@@ -147,21 +147,18 @@ Rota | Descrição
 
 ``` json
 [
-  [
-    {
-      "nome": "Pedro",
-      "nascimento": "2000-01-04T02:00:00.000Z",
-      "sexo": "M",
-      "peso": 80
-    },
-    {
-      "nome": "Valentina",
-      "nascimento": "1989-04-07T03:00:00.000Z",
-      "sexo": "F",
-      "peso": 62.1
-    }
-  ],
-  .....
+  {
+    "nome": "Pedro",
+    "nascimento": "2000-01-04T02:00:00.000Z",
+    "sexo": "M",
+    "peso": 80
+  },
+  {
+    "nome": "Valentina",
+    "nascimento": "1989-04-07T03:00:00.000Z",
+    "sexo": "F",
+    "peso": 62.1
+  }
 ]
 ```
 
