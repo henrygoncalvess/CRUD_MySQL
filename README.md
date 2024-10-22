@@ -15,6 +15,10 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
   - [Etapas](#etapas)
 - [Instrução de uso](#instrução-de-uso)
 - [Endpoints do CRUD](#endpoints-do-crud)
+  - [GET - Response](#get---response)
+  - [POST - Request](#post---request)
+  - [PUT - Request](#put---request)
+  - [DELETE - Request](#delete---request)
   
 </details>
 
