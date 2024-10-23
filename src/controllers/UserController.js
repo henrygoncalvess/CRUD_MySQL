@@ -5,10 +5,10 @@ class UserController{
         try{
             const users = await UserModel.findAll()
 
-            res.json(users)
+            res.status(200).json(users)
 
         } catch (error){
-            res.sendStatus(400)
+            res.status(400)
             throw error
         }
     }
@@ -19,10 +19,10 @@ class UserController{
             
             const newUser = await UserModel.create({ nome, nascimento, sexo, peso })
 
-            res.json(newUser)
+            res.status(201).json(newUser)
 
         } catch (error){
-            res.sendStatus(400)
+            res.status(400)
             throw error
         }
     }
@@ -33,10 +33,10 @@ class UserController{
 
             const userUpdate = await UserModel.update(usuario, updates)
 
-            res.json(userUpdate)
+            res.status(200).json(userUpdate)
 
         } catch (error) {
-            res.sendStatus(400)
+            res.status(400)
             throw error
         }
     }
@@ -47,10 +47,10 @@ class UserController{
 
             const userDelete = await UserModel.remove(usuario)
 
-            res.json(userDelete)
+            res.status(200).json(userDelete)
 
         } catch (error) {
-            res.sendStatus(400)
+            res.status(400)
             throw error
         }
     }
