@@ -10,8 +10,8 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 <summary>Tabela de Conteúdos</summary>
   
 - [Instrução de instalação](#instrução-de-instalação)
-  - [Clonando Repositório](#clonando-repositório)
   - [Pré-requisitos](#pré-requisitos)
+  - [Clonando Repositório](#clonando-repositório)
   - [Etapas](#etapas)
 - [Instrução de uso](#instrução-de-uso)
 - [Endpoints do CRUD](#endpoints-do-crud)
@@ -44,16 +44,6 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 
 ## Instrução de instalação
 
-### Clonando Repositório
-No Terminal, certifique de que você está na pasta onde vai ficar o repositório
-
-```repositorios\clonados```
-``` bash
-git clone https://github.com/henrygoncalvess/CRUD_MySQL.git
-```
-
-<br>
-
 ### Pré-requisitos
 - **MySQL** - [Tutorial de instalação](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela)
 
@@ -70,6 +60,16 @@ Para fazer requisições e testar a conexão com o banco:
 > [!tip]
 > Também é possível fazer requisições pela linha de comando.  
 [Clique aqui](https://www.campuscode.com.br/conteudos/comandos-curl-para-testar-requisicoes-api) para aprender a fazer requisições pelo terminal
+
+<br>
+
+### Clonando Repositório
+No Terminal, certifique de que você está na pasta onde vai ficar o repositório
+
+```repositorios\clonados```
+``` bash
+git clone https://github.com/henrygoncalvess/CRUD_MySQL.git
+```
 
 <br>
 
