@@ -62,7 +62,7 @@ flowchart LR
     %%arquivos
     linkStyle default stroke-width:2px;
 
-    click src "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src"
+    click src \"https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src"
     click config "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config"
     click db.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config/db.js"
     click controllers "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/controllers"
