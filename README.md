@@ -26,19 +26,35 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 
 ### Estrutura de pastas
 
-├──**CRUD_MySQL/**  
-│&nbsp; &nbsp; &nbsp;├──[src/](src)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[config/](src/config) _`conexão com banco de dados`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[db.js](src/config/db.js)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[controllers/](src/controllers) _`lógica de negócio`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserController.js](src/controllers/UserController.js)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[models/](src/models) _`modelos que lidam c/ banco de dados. consultas, manipulação etc.`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserModel.js](src/models/UserModel.js)  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;└──[routes/](src/routes) _`rotas da API`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\`- - -[Users.js](src/routes/users.js)  
-│&nbsp; &nbsp; &nbsp; \`- - -[app.js](src/app.js) _`lógica da aplicação`_  
-│&nbsp; &nbsp; &nbsp; \`- - -[server.js](src/server.js) _`ponto de entrada da aplicação`_  
-\`- - - ~~.env~~ _`configs de ambiente`_   
+``` mermaid
+flowchart LR
+    root("📁 CRUD_MySQL")
+    root === src("📁 src")
+    src === config("📁 config")
+    config --- db.js("📄 db.js")
+    src === controllers("📁 controllers")
+    controllers --- UserController.js("📄 UserController.js")
+    src === models("📁 models")
+    models --- UserModel.js("📄 UserModel.js")
+    src === routes("📁 routes")
+    routes --- Users.js("📄 Users.js")
+    src --- app.js("📄 app.js")
+    src --- server.js("📄 server.js")
+    .env("⚙️ .env")
+
+    click src "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src"
+    click config "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config"
+    click db.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config/db.js"
+    click controllers "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/controllers"
+    click UserController.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/controllers/UserController.js"
+    click models "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/models"
+    click UserModel.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/models/UserModel.js"
+    click routes "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes"
+    click Users.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes/Users.js"
+    click app.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/app.js"
+    click server.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/server.js"
+
+```
 
 <br>
 
