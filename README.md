@@ -24,9 +24,10 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 
 <br>
 
-### Estrutura de pastas
-
 ``` mermaid
+---
+title:  Estrutura de pastas
+---
 flowchart LR
     crud("📁 _CRUD_MySQL_")@{ shape: processes }
     crud --o src("📁 _src_")@{ shape: processes }
