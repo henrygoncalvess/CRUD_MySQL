@@ -70,7 +70,7 @@ flowchart LR
     click models "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/models"
     click UserModel.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/models/UserModel.js"
     click routes "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes"
-    click Users.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes/Users.js"
+    click Users.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes/users.js"
     click app.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/app.js"
     click server.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/server.js"
 ```
