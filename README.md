@@ -31,7 +31,7 @@ Criando conexão com MySQL e utilizando minha API REST para fazer as quatro oper
 │&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;├──[models/](src/models) _`modelos que lidam c/ banco de dados. consultas, manipulação etc.`_  
 │&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; \`- - -[UserModel.js](src/models/UserModel.js)  
 │&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp;└──[routes/](src/routes) _`rotas da API`_  
-│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\`- - -[Users.js](src/routes/Users.js)  
+│&nbsp; &nbsp; &nbsp;│&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\`- - -[Users.js](src/routes/users.js)  
 │&nbsp; &nbsp; &nbsp; \`- - -[app.js](src/app.js) _`lógica da aplicação`_  
 │&nbsp; &nbsp; &nbsp; \`- - -[server.js](src/server.js) _`ponto de entrada da aplicação`_  
 \`- - - ~~.env~~ _`configs de ambiente`_   
