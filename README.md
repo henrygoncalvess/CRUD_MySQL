@@ -45,7 +45,8 @@ title:  Estrutura de pastas
 ---
 flowchart LR
     crud("📁 _CRUD_MySQL_")@{ shape: processes }
-    crud --o src("📁 _src_")@{ shape: processes }
+    crud --o build("📁 _build_")@{ shape: processes }
+    crud ---o src("📁 _src_")@{ shape: processes }
     src --o config("📁 _config_")@{ shape: processes }
     config --- db.ts("📄 **db.ts**")@{ shape: card }
     src --o controllers("📁 _controllers_")@{ shape: processes }
@@ -65,7 +66,7 @@ flowchart LR
     classDef envStyle fill:#000000,stroke:#000000,color:gray;
 
     %%aplicação de classes
-    class crud,src,config,controllers,models,routes pasta
+    class crud,src,config,controllers,models,routes,build pasta
     class env envStyle
 
 
@@ -78,6 +79,7 @@ flowchart LR
     %%arquivos
     linkStyle default stroke-width:2px;
 
+    click build "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/build"
     click src "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src"
     click config "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config"
     click db.ts "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config/db.ts"
