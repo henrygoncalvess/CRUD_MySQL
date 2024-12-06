@@ -135,6 +135,7 @@ npm init
 `repositorios\clonados\CRUD_MySQL`
 ``` bash
 npm install cors@2.8.5 mysql2@3.11.3 dotenv@16.4.5 express@4.21.1
+npm i --save-dev @types/node
 ```
 
 #### 3. crie o arquivo `.env` na raiz do projeto - `repositorios\clonados\CRUD_MySQL`, e configure as variáveis de acordo com seus dados do MySQL.
