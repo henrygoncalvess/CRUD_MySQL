@@ -47,15 +47,15 @@ flowchart LR
     crud("📁 _CRUD_MySQL_")@{ shape: processes }
     crud --o src("📁 _src_")@{ shape: processes }
     src --o config("📁 _config_")@{ shape: processes }
-    config --- db.js("📄 **db.js**")@{ shape: card }
+    config --- db.ts("📄 **db.ts**")@{ shape: card }
     src --o controllers("📁 _controllers_")@{ shape: processes }
-    controllers --- UserController.js("📄 **UserController.js**")@{ shape: card }
+    controllers --- UserController.ts("📄 **UserController.ts**")@{ shape: card }
     src --o models("📁 _models_")@{ shape: processes }
-    models --- UserModel.js("📄 **UserModel.js**")@{ shape: card }
+    models --- UserModel.ts("📄 **UserModel.ts**")@{ shape: card }
     src --o routes("📁 _routes_")@{ shape: processes }
-    routes --- Users.js("📄 **Users.js**")@{ shape: card }
-    src --- app.js("📄 **app.js**")@{ shape: card }
-    src --- server.js("📄 **server.js**")@{ shape: card }
+    routes --- Users.ts("📄 **Users.ts**")@{ shape: card }
+    src --- app.ts("📄 **app.ts**")@{ shape: card }
+    src --- server.ts("📄 **server.ts**")@{ shape: card }
     env("⚙️ .env")
 
     %%CLASSES
@@ -80,15 +80,15 @@ flowchart LR
 
     click src "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src"
     click config "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config"
-    click db.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config/db.js"
+    click db.ts "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/config/db.ts"
     click controllers "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/controllers"
-    click UserController.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/controllers/UserController.js"
+    click UserController.ts "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/controllers/UserController.ts"
     click models "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/models"
-    click UserModel.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/models/UserModel.js"
+    click UserModel.ts "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/models/UserModel.ts"
     click routes "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes"
-    click Users.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes/users.js"
-    click app.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/app.js"
-    click server.js "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/server.js"
+    click Users.ts "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/routes/Users.ts"
+    click app.ts "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/app.ts"
+    click server.ts "https://github.com/henrygoncalvess/CRUD_MySQL/tree/main/src/server.ts"
 ```
 
 <br>
