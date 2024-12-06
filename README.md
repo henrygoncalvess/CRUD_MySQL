@@ -5,7 +5,7 @@ Criando conexão com MySQL + TypeScript e utilizando minha API REST para fazer a
 <br>
 
 **licença e tecnologias utilizadas**:  
-<img src="https://img.shields.io/github/license/henrygoncalvess/CRUD_MySQL?style=for-the-badge&labelColor=gray&color=97ca00"> <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/mysql-8.0.39-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=gray"></a> <a href="https://expressjs.com/pt-br/"><img src="https://img.shields.io/badge/express-4.21.1-000000?style=for-the-badge&logo=express&logoColor=black&labelColor=gray"></a> <a href="https://www.typescriptlang.org/docs/"><img src="https://img.shields.io/badge/typescript-5.7.2-3178C6?style=for-the-badge&logo=typescript&logoColor=3178C6&labelColor=gray"></a> <a href="https://nodejs.org/pt"><img src="https://img.shields.io/badge/node-20.16.0-5FA04E?style=for-the-badge&logo=node.js&logoColor=5FA04E&labelColor=gray"></a> <a href="https://learning.postman.com/docs/introduction/overview/"><img src="https://img.shields.io/badge/postman-11.16.0-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37&labelColor=gray"></a>
+<img src="https://img.shields.io/github/license/henrygoncalvess/CRUD_MySQL?style=for-the-badge&labelColor=gray&color=97ca00"> <a href="https://www.mysql.com/"><img src="https://img.shields.io/badge/mysql-8.0.39-4479A1?style=for-the-badge&logo=mysql&logoColor=white&labelColor=gray"></a> <a href="https://expressjs.com/pt-br/"><img src="https://img.shields.io/badge/express-4.21.1-000000?style=for-the-badge&logo=express&logoColor=black&labelColor=gray"></a> <a href="https://www.typescriptlang.org/docs/"><img src="https://img.shields.io/badge/typescript-5.7.2-3178C6?style=for-the-badge&logo=typescript&logoColor=3178C6&labelColor=gray"></a> <a href="https://nodejs.org/pt"><img src="https://img.shields.io/badge/node-22.12.0-5FA04E?style=for-the-badge&logo=node.js&logoColor=5FA04E&labelColor=gray"></a> <a href="https://learning.postman.com/docs/introduction/overview/"><img src="https://img.shields.io/badge/postman-11.16.0-FF6C37?style=for-the-badge&logo=postman&logoColor=FF6C37&labelColor=gray"></a>
 
 **Insalador de pacotes**:  
 <a href="https://docs.npmjs.com"><img src="https://img.shields.io/badge/npm-10.8.2-CB3837?style=for-the-badge&logo=npm&logoColor=CB3837&labelColor=gray"></a> 
@@ -139,7 +139,7 @@ npm init
 
 #### 2. Adicione os seguintes scripts ao package.json:
 
-`repositorios\clonados\CRUD_MySQL`
+`repositorios\clonados\CRUD_MySQL\package.json`
 ``` json
 "scripts": {
    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
@@ -152,8 +152,10 @@ npm init
 
 `repositorios\clonados\CRUD_MySQL`
 ``` bash
-npm install cors@4.24.1 mysql2@3.11.3 dotenv@16.4.5 express@4.21.1
-npm install --save-dev typescript @types/node @types/express @types/cors ts-node
+npm install cors@2.8.5 mysql2@3.11.3 dotenv@16.4.5 express@4.21.1
+```
+``` bash
+npm install --save-dev typescript@5.7.2 @types/node @types/express @types/cors ts-node
 ```
 
 #### 4. Inicialize o TypeScript e configure o arquivo `tsconfig.json`.
@@ -167,7 +169,7 @@ npx tsc --init
 _este padrão de arquivo typescript está de acordo com esta [documentação](https://github.com/tsconfig/bases)_  
 _baseado na versão node utilizada_
 
-`repositorios\clonados\CRUD_MySQL`
+`repositorios\clonados\CRUD_MySQL\tsconfig.json`
 ``` json
 {
   "$schema": "https://json.schemastore.org/tsconfig",
@@ -213,7 +215,7 @@ npm run build
 
 Inicie o servidor local e veja [Endpoints do CRUD](#endpoints-do-crud) para testar as respostas do banco
 
-`repositorios\clonados\CRUD_MySQL\src`
+`repositorios\clonados\CRUD_MySQL`
 ``` bash
 npm run start
 ```
