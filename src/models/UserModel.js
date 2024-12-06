@@ -26,7 +26,7 @@ class UserModel{
         }
 
         // captura as chaves de "updates"... o "map" normalmente retorna um array com os resultados...
-        // então aqui, ele retorna um array com strings relacionadas as chaves -> "peso = ?".
+        // então aqui, ele retorna um array com strings relacionadas as chaves -> chave = peso -> "peso = ?".
         // em seguida, as strings do array se tornam uma só, com a junção de "," utilizando o ".join()"
         const stringOfUpdates = Object.keys(updates).map(key => `${key} = ?`).join(', ')
 
