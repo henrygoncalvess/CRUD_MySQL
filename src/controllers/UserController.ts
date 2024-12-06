@@ -1,7 +1,8 @@
-const UserModel = require('../models/UserModel.js')
+import { Request, Response } from 'express';
+import UserModel from '../models/UserModel';
 
 class UserController{
-    async index(req, res){
+    async index(req: Request, res: Response): Promise<void>{
         try{
             const users = await UserModel.findAll()
 
@@ -13,7 +14,7 @@ class UserController{
         }
     }
 
-    async new(req, res){
+    async new(req: Request, res: Response): Promise<void>{
         try{
             const { nome, nascimento, sexo, peso } = req.body
             
@@ -27,7 +28,7 @@ class UserController{
         }
     }
 
-    async update(req, res){
+    async update(req: Request, res: Response): Promise<void>{
         try{
             const { usuario, ...updates } = req.body;
 
@@ -41,7 +42,7 @@ class UserController{
         }
     }
 
-    async remove(req, res){
+    async remove(req: Request, res: Response): Promise<void>{
         try{
             const { usuario } = req.body
 
@@ -56,4 +57,4 @@ class UserController{
     }
 }
 
-module.exports = new UserController
+export default new UserController

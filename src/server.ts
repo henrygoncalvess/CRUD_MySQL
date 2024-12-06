@@ -1,5 +1,5 @@
-require('dotenv').config()
-const app = require('./app.js')
+import 'dotenv/config';
+import app from './app';
 
 app.listen(3000, () => {
     console.log('rodando')

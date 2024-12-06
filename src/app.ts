@@ -1,8 +1,10 @@
-const express = require('express')
-const cors = require('cors')
-const rota = require('./routes/Users.js')
+import express, { Application } from "express";
+import cors from 'cors';
+import rota from "./routes/Users";
 
 class App{
+    public express: Application;
+
     constructor(){
         this.express = express()
         this.#middlewares()
@@ -15,4 +17,4 @@ class App{
     }
 }
 
-module.exports = new App().express
+export default new App().express;

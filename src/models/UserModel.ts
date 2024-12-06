@@ -1,13 +1,22 @@
-const database = require('../config/db.js');
+import database from '../config/db';
+
+interface User {
+    nome: string,
+    nascimento: string,
+    sexo: string,
+    peso?: number;
+}
 
 class UserModel{
-    static async findAll(){
-        const [ getQuery ] = await database.query(`SELECT * FROM ${process.env.TABLE}`)
+    static async findAll(): Promise<any>{
+        const [ getQuery ] = await database.query(`SELECT * FROM ${process.env.TABLE}`);
 
         return getQuery
     }
 
-    static async create({ nome, nascimento, sexo, peso }){
+    static async create(user: User): Promise<any>{
+        const { nome, nascimento, sexo, peso } = user;
+
         if (!nome || !nascimento || !sexo){
             throw new Error(`Os campos "nome", "nascimento" e "sexo" são obrigatórios.`);
         }
@@ -20,7 +29,7 @@ class UserModel{
         return newUserQuery
     }
 
-    static async update(usuario, updates){
+    static async update(usuario: string, updates: Partial<User>): Promise<any>{
         if (!usuario){
             throw new Error(`O campo "usuario" é obrigatório.`);
         }
@@ -46,7 +55,7 @@ class UserModel{
         return updateQuery
     }
 
-    static async remove(usuario){
+    static async remove(usuario: string): Promise<any>{
         const deleteQuery = await database.query(`DELETE FROM ${process.env.TABLE} WHERE nome = ?`,
             [usuario]
         )
@@ -55,4 +64,4 @@ class UserModel{
     }
 }
 
-module.exports = UserModel
+export default UserModel

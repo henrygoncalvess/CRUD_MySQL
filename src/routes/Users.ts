@@ -1,6 +1,7 @@
-const express = require('express')
-const rota = express.Router()
-const UserController = require('../controllers/UserController.js')
+import { Router } from 'express';
+import UserController from '../controllers/UserController';
+
+const rota = Router()
 
 rota.get('/user', UserController.index)
 
@@ -10,4 +11,4 @@ rota.put('/update/user', UserController.update)
 
 rota.delete('/delete/user', UserController.remove)
 
-module.exports = rota
+export default rota;
