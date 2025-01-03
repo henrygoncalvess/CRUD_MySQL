@@ -98,19 +98,19 @@ flowchart LR
 ## Instrução de instalação
 
 ### Pré-requisitos
-- **MySQL** - [Tutorial de instalação](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela)
+- <img src="https://cdn.simpleicons.org/mysql/000000/ffffff?viewbox=auto" width=24>&nbsp; **MySQL** - [Tutorial de instalação](https://www.alura.com.br/artigos/mysql-do-download-e-instalacao-ate-sua-primeira-tabela)
 
 Para a instalação dos frameworks, middlewares e dependências que possibilitaram a criação da API  
 e a conexão com o MySQL é necessário que você possua as seguintes ferramentas:
 
-- **Node.js** - [Tutorial de instalação](https://nodejs.org/pt)
+- <img src="https://cdn.simpleicons.org/nodedotjs/5FA04E/5FA04E?viewbox=auto" width=24>&nbsp; **Node.js** - [Tutorial de instalação](https://nodejs.org/pt)
 
-- **npm** - [Tutorial de instalação](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- <img src="https://cdn.simpleicons.org/npm/CB3837/CB3837?viewbox=auto" width=24>&nbsp; **npm** - [Tutorial de instalação](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-- **TypeScript** - [Tutorial de instalação](https://www.typescriptlang.org/download/)
+- <img src="https://cdn.simpleicons.org/typescript/3178C6/3178C6?viewbox=auto" width=24>&nbsp; **TypeScript** - [Tutorial de instalação](https://www.typescriptlang.org/download/)
 
 Para fazer requisições e testar a conexão com o banco:
-- **Postman** - [Tutorial de instalação](https://www.postman.com/downloads/)
+- <img src="https://cdn.simpleicons.org/postman/FF6C37/FF6C37?viewbox=auto" width=24>&nbsp; **Postman** - [Tutorial de instalação](https://www.postman.com/downloads/)
 
 > [!tip]
 > Também é possível fazer requisições pela linha de comando.  
