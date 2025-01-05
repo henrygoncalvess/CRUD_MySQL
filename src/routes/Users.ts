@@ -3,12 +3,12 @@ import UserController from '../controllers/UserController';
 
 const rota = Router()
 
-rota.get('/user', UserController.index)
+rota.get('/users', UserController.index)
 
-rota.post('/new/user', UserController.new)
+rota.post('/users', UserController.new)
 
-rota.put('/update/user', UserController.update)
+rota.put('/users', UserController.update)
 
-rota.delete('/delete/user', UserController.remove)
+rota.delete('/users', UserController.remove)
 
 export default rota;
