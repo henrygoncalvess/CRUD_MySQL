@@ -142,20 +142,20 @@ npm init
 `repositorios\clonados\CRUD_MySQL\package.json`
 ``` json
 "scripts": {
-   "dev": "tsx --watch src/server.ts"
+  "dev": "tsx --watch src/server.ts"
 },
 "dependencies": {
-  "cors": "^2.8.5",
-  "dotenv": "^16.4.5",
-  "express": "^4.21.1",
-  "mysql2": "^3.11.3"
+  "cors": "2.8.5",
+  "dotenv": "16.4.5",
+  "express": "4.21.1",
+  "mysql2": "3.11.3"
 },
 "devDependencies": {
-  "@types/cors": "^2.8.17",
-  "@types/express": "^5.0.0",
-  "@types/node": "^22.10.1",
-  "ts-node": "^10.9.2",
-  "typescript": "^5.7.2"
+  "@types/cors": "2.8.17",
+  "@types/express": "5.0.0",
+  "@types/node": "22.10.1",
+  "typescript": "5.7.2",
+  "tsx": "4.19.2"
 }
 ```
 
