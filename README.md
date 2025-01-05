@@ -137,25 +137,33 @@ git clone https://github.com/henrygoncalvess/CRUD_MySQL.git
 npm init
 ```
 
-#### 2. Adicione os seguintes scripts ao package.json:
+#### 2. Adicione o seguinte código ao package.json:
 
 `repositorios\clonados\CRUD_MySQL\package.json`
 ``` json
 "scripts": {
-   "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
-   "start": "node build/server.js",
-   "build": "tsc"
+   "dev": "tsx --watch src/server.ts"
+},
+"dependencies": {
+  "cors": "^2.8.5",
+  "dotenv": "^16.4.5",
+  "express": "^4.21.1",
+  "mysql2": "^3.11.3"
+},
+"devDependencies": {
+  "@types/cors": "^2.8.17",
+  "@types/express": "^5.0.0",
+  "@types/node": "^22.10.1",
+  "ts-node": "^10.9.2",
+  "typescript": "^5.7.2"
 }
 ```
 
-#### 3. em seguida, instale as dependências necessárias para o funcionamento do projeto.
+#### 3. com as dependências listadas em `package.json`, inicie a instalação.
 
 `repositorios\clonados\CRUD_MySQL`
 ``` bash
-npm install cors@2.8.5 mysql2@3.11.3 dotenv@16.4.5 express@4.21.1
-```
-``` bash
-npm install --save-dev typescript@5.7.2 @types/node @types/express @types/cors ts-node
+npm install
 ```
 
 #### 4. Inicialize o TypeScript e configure o arquivo `tsconfig.json`.
@@ -180,14 +188,11 @@ _baseado na versão node utilizada_
     "lib": ["es2023"],
     "module": "node16",
     "target": "es2022",
+
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16",
-    "rootDirs": ["./src"],
-    "outDir": "./build",
-    "removeComments": true,
-    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16"
   }
 }
 ```
@@ -206,18 +211,11 @@ TABLE=sua_tabela
 
 ## Instrução de uso
 
-#### 1. Compile o código TypeScript para JavaScript.
-
-`repositorios\clonados\CRUD_MySQL`
-``` bash
-npm run build
-```
-
 Inicie o servidor local e veja [Endpoints do CRUD](#endpoints-do-crud) para testar as respostas do banco
 
 `repositorios\clonados\CRUD_MySQL`
 ``` bash
-npm run start
+npm run dev
 ```
 
 <br>
