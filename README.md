@@ -233,10 +233,10 @@ teste as respostas da conexão com o MySQL seguindo os **endpoints** abaixo.
 
 Rota | Descrição
 --- | :---:
-***GET*** ` http://localhost:3000/api/user ` | Lista todas as informações da tabela - [ver JSON](#get---response)
-***POST*** ` http://localhost:3000/api/new/user ` | Adiciona um novo item na tabela - [ver JSON](#post---request)
-***PUT*** ` http://localhost:3000/api/update/user ` | Atualiza as informações da tabela - [ver JSON](#put---request)
-***DELETE*** ` http://localhost:3000/api/delete/user ` | Deleta uma linha da tabela - [ver JSON](#delete---request)
+***GET*** ` http://localhost:3000/users ` | Lista todas as informações da tabela - [ver JSON](#get---response)
+***POST*** ` http://localhost:3000/users ` | Adiciona um novo item na tabela - [ver JSON](#post---request)
+***PUT*** ` http://localhost:3000/users ` | Atualiza as informações da tabela - [ver JSON](#put---request)
+***DELETE*** ` http://localhost:3000/users ` | Deleta uma linha da tabela - [ver JSON](#delete---request)
 
 <br>
 
